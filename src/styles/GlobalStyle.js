@@ -16,6 +16,9 @@ const GlobalStyle = createGlobalStyle`
     color: #333;
     background-color: #fff;
     -webkit-font-smoothing: antialiased;
+    width:100%
+    margin: 0;
+    padding: 0;
   }
 
   /* 3. 링크(a) 태그 초기화 */
