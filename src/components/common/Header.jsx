@@ -108,13 +108,13 @@ export default Header;
 
 // --- Styled Components ---
 const HeaderContainer = styled.header`
-  width: 100%;
+  width: 1920px;
   display: flex;
   flex-direction: column;
 `;
 
 const InnerContainer = styled.div`
-  max-width: 1200px;
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -123,7 +123,7 @@ const InnerContainer = styled.div`
 `;
 
 const TopSection = styled.div`
-  background-color: #f8f8f8;
+  background-color: #34AFE9;
   border-bottom: 1px solid #eee;
   font-size: 12px;
   height: 35px;
@@ -137,10 +137,10 @@ const LeftNav = styled.div`
   gap: 15px;
 
   a {
-    color: #666;
+    color: #FFFFFF;
+    font-weight:bold;
     text-decoration: none;
     &.active {
-      font-weight: bold;
       color: #333;
     }
   }
@@ -153,7 +153,8 @@ const RightUtil = styled.div`
   gap: 15px;
 
   a {
-    color: #666;
+    color: #FFFFFF;
+    font-weight:bold;
     text-decoration: none;
   }
 `;
@@ -234,7 +235,7 @@ const MenuList = styled.ul`
     }
 
     &.highlight {
-      color: #ff4b4b;
+      color: #FB2888;
     }
   }
 `;

@@ -41,3 +41,144 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Home.css 또는 App.css */
+
+.home-container {
+  display: flex;
+  justify-content: center;  /* 중앙으로 모음 */
+  align-items: flex-start;  /* 상단 정렬 */
+  max-width: 1200px;        /* 알라딘 표준 너비 */
+  margin: 0 auto;           /* 화면 중앙 배치 */
+  padding: 20px;
+  gap: 20px;
+}
+
+/* 좌/우 사이드바 공통 */
+.sidebar {
+  width: 200px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 20px; /* 상단에서 20px 떨어진 위치에 고정 */
+}
+
+.left-sidebar { width: 120px; }
+.right-sidebar { width: 160px; }
+
+/* 중앙 메인 컨텐츠 */
+.main-content {
+  flex: 1;
+  min-width: 0; /* flex 아이템의 최소 너비 해제 */
+}
+
+/* 도서 그리드 (핵심!) */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 4열 배치 */
+  gap: 30px 15px;
+  margin-top: 20px;
+}
+
+/* BookCard 스타일 */
+.book-card {
+  max-width : 180px;
+  margin : 0 auto;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-image-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.book-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  /* 두 줄 이상이면 생략 처리(...) */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.book-author {
+  font-size: 12px;
+  color: #666;
+}
+
+.carousel-section {
+  width: 100%;
+  margin: 20px 0;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-window {
+  width: 100%;
+  overflow: hidden; /* 영역 밖 이미지는 숨김 */
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* 부드러운 가속도 효과 */
+}
+
+.carousel-slide {
+  min-width: 100%; /* 한 슬라이드가 창문 하나를 꽉 채움 */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 한 슬라이드 내부에 4개의 카드를 배치 */
+.slide-grid {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+}
+
+/* 탭 메뉴 스타일 */
+.carousel-tabs {
+  display: flex;
+  border-top: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 10px 5px;
+  border: none;
+  background: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #666;
+  border-right: 1px solid #eee;
+}
+
+.tab-btn:last-child {
+  border-right: none;
+}
+
+.tab-btn.active {
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  border-top: 2px solid #ed2b91; /* 알라딘 포인트 컬러 */
+}
